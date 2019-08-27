@@ -1,0 +1,24 @@
+<h1>New rails blog</h1>
+<p>Learn about rails with the articles below</p>
+
+<button>
+<% @pages.each do |page| %>
+    <%= link_to 'Show page | ', page_path(page)%>
+    <%= link_to 'Edit page', edit_page_path(page)%>
+    <%= link_to 'Delete page', page, method: :delete %>
+
+<% end%>
+</button>
+
+<hr>
+
+<button>
+<%= link_to 'New Page', new_page_path %>
+</button>
+<!-- 
+<%  %> - Non echoing tag <%# displays nothing%>
+<%= %> - echoing tag
+<%#  %>
+-->
+
+
